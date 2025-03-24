@@ -1,5 +1,11 @@
 img {
     display: block;
-    margin : 0 auto;
-    width : 25%;
-}
+    margin: 0 auto;
+    width: 25%;
+  }
+  
+  div[style="color: red; font-size: 14px;"] {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

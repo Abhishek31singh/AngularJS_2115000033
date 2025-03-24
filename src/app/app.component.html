@@ -2,10 +2,13 @@
 
 <h1>Welcome to BridgeLabz, {{ userName || 'Guest' }}!</h1>
 
-<input [(ngModel)]="userName" placeholder="Enter your name" />
+<input [(ngModel)]="userName" (ngModelChange)="validateUserName()" placeholder="Enter your name" />
+
+<div *ngIf="errorMessage" style="color: red; font-size: 14px;">
+  {{ errorMessage }}
+</div>
 
 <div class="LOGO">
   <h1>Welcome to BRIDGELABZ</h1>
-
   <img [src]="bridgeLabzLogo" alt="BridgeLabz Logo" (click)="onClick($event)" />
 </div>
